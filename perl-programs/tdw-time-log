@@ -1,0 +1,14 @@
+#!/usr/bin/env perl
+use warnings;
+use strict;
+
+my $t1 = time;
+while (1) {
+    my $t2 = time;
+    my $diff = $t2 - $t1;
+    my $hours = $diff / 60;
+    # Round number to 2 digits after decimal point
+    printf("%.2f\n", $hours);
+    sleep 1;
+    last if $count++ > 3;
+}
