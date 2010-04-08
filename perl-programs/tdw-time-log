@@ -12,7 +12,13 @@ while (1) {
 sub print_elapsed_time {
     my ( $t1, $t2 ) = @_;
     my $diff = $t2 - $t1;
-    my $hours = $diff / 3660;
+    my $hours = $diff / 3600;
     # Round number to 2 digits after decimal point
-    printf("%.2f\r", $hours);
+    printf("%.2f %s\r", $hours, &minutes_and_seconds);
+#    print &minutes_and_seconds, "\n";
+}
+
+sub minutes_and_seconds {
+    my ( $t1, $t2 ) = @_;
+    return "foo";
 }
